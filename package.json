@@ -1,0 +1,33 @@
+{
+   "dependencies": {
+      "@types/mocha": "^8.0.4",
+      "body-parser": "^1.18.1",
+      "chai": "^4.2.0",
+      "chai-http": "^4.3.0",
+      "express": "^4.15.4",
+      "mocha": "^8.2.1",
+      "pg": "^8.4.0",
+      "reflect-metadata": "^0.1.10",
+      "typeorm": "0.2.29"
+   },
+   "devDependencies": {
+      "@types/node": "^8.0.29",
+      "ts-node": "3.3.0",
+      "typescript": "3.3.3333"
+   },
+   "name": "y",
+   "version": "y",
+   "main": "y",
+   "repository": "y",
+   "author": "y",
+   "license": "y",
+   "scripts": {
+      "start": "ts-node src/index.ts",
+      "makeMigrations": "yarn orm migration:generate",
+      "migrate": "yarn orm migration:run",
+      "rollback": "yarn orm migration:revert",
+      "test": "mocha --inspect -r ts-node/register -r src/test/_apiTest.ts"
+   },
+   "description": "y",
+   "private": true
+}
