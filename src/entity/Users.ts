@@ -15,9 +15,6 @@ export class Users {
     @Column()
     age: number;
 
-//    @Column()
-//    address: string;
-
 }
 
 export default Users;

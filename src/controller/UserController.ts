@@ -19,7 +19,7 @@ export class UserController {
     }
 
     async fix(request: Request, response: Response, next: NextFunction) {
-        await this.userRepository.update(request.params.id,request.body);
+        this.userRepository.update(request.params.id,request.body);
         return this.userRepository.findOne(request.params.id);
     }
 
