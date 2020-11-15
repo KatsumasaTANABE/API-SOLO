@@ -75,5 +75,4 @@ describe("expense manager", () => {
     });
   });
 
-
 });

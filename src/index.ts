@@ -37,6 +37,7 @@ DatabaseConnectionManager.connect()
     );
 */
 
+/*
     const genres = new Genres();
     genres.genre = "生活";
     const manager1 = getMongoManager();
@@ -49,7 +50,7 @@ DatabaseConnectionManager.connect()
     const manager2 = getMongoManager();
     await manager2.save(leftovers);
 
-
+*/
 
     console.log(
       "Express server has started on port 3000. Open http://localhost:3000/leftovers to see results"
