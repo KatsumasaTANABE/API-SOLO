@@ -9,7 +9,7 @@
 ### GET 　残り物検索
 
 ```
-http://localhost:3000/leftpvers
+http://localhost:3000/leftovers
 ```
 
 全ての残り物の管理方法・使い道を検索する。  
