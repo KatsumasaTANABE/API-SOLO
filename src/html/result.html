@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>solo=project</title>
+    <link rel="stylesheet" href="./style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <script src="./scripts/serverLeftover.ts"></script>
+    <h1>残り物活用管理</h1>
+    <a href="main.html">開始画面に戻る</a><br>
+    <a href="leftover.html">残り物管理種管理画面に戻る</a><br>
+    <div id="parent">
+      <div id="in">
+      <h3>残り物活用一覧</h3>
+        <p></p>
+          <p></p>
+          <table border="1" id="resultTable">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>タイトル</th>
+                    <th>ジャンル</th>
+                    <th>内容</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <div data-im="id"></div>
+                    </td>
+                    <td>
+                        <div data-im="titlename"></div>
+                    </td>
+                    <td>
+                        <div data-im="genre"></div>
+                    </td>
+                    <td>
+                        <div data-im="useleftover"></div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+      </div>
+      <div id="out">
+        <p></p>
+      </div>
+    </div>
+  </body>
+</html>

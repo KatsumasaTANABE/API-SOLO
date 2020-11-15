@@ -46,8 +46,8 @@ describe("expense manager", () => {
     it("should be able to retrieve a leftovers", async () => {
       const res = await chai.request(app).get(`/leftovers`);
       testnumber = res.body[0].id;
-      console.log(res.body[0].id);
-      console.log(res.body);
+//      console.log(res.body[0].id);
+//      console.log(res.body);
 
       expect(res).to.have.status(200);
     });
@@ -56,21 +56,21 @@ describe("expense manager", () => {
   describe("get test /leftovers/:id", () => {
     it("should be able to retrieve a leftovers", async () => {
       const testUrl = "/leftovers/" + testnumber;
-      console.log(testUrl);
+//      console.log(testUrl);
       const res = await chai.request(app).get(testUrl);
-      console.log(res.body);
+//      console.log(res.body);
 
       expect(res).to.have.status(200);
     });
   });
 
   describe("post test /leftovers", () => {
-    const testData ={name: "katsumasa", genre: "foods", useLeftover: "sample"};
+    const testData ={titlename: "katsumasa", genre: "生活", useleftover: "sample"};
 
     it("should be able to retrieve a leftovers", async () => {
       const res = await (await chai.request(app).post(`/leftovers`)
                   .send(testData));
-      console.log(res.body);
+//      console.log(res.body);
       expect(res).to.have.status(200);
     });
   });

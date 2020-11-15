@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>solo=project</title>
+    <link rel="stylesheet" href="./style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <script src="./scripts/serverLeftover.ts"></script>
+    <h1>残り物活用管理</h1>
+    <a href="main.html">開始画面に戻る</a><br>
+    <div id="parent">
+      <div id="in">
+        <p></p>
+        <h3>残り物活用方法一覧を取得する</h3>
+        <form method="get" action="http://localhost:3000/leftovers">
+        <p></p>
+        <table border="0">
+          <tbody>
+            <tr>
+              <td>
+                <p><input type="submit" formaction = "result.html" value="取得する"></p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </form>
+
+      <h3>残り物活用方法を取得する</h3>
+      <form method="get" action="http://localhost:3000/leftovers">
+      <p></p>
+      <table border="0">
+        <tbody>
+          <tr>
+            <td>id</td>
+            <td><input type="number" id="id" data-im="@id" placeholder="id" /></td>
+          </tr>
+          <tr>
+            <td>
+              <p><input type="submit" value="取得する"></p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </form>
+
+      <h3>残り物活用方法を登録する</h3>
+        <p></p>
+        <form method="post" action="http://localhost:3000/leftovers">
+          <p></p>
+          <table border="0">
+            <tbody>
+              <tr>
+                <td>titlename</td>
+                <td><input type="text" id="titlename" placeholder="残り物活用法タイトル" /></td>
+              </tr>
+              <tr>
+                <td>genre</td>
+                <td><input type="text" id="genre" placeholder="ジャンルを選択" /></td>
+              </tr>
+              <tr>
+                <td>useleftover</td>
+                <td><input type="text" id="useleftover" placeholder="活用例を具体的に記載" /></td>
+              </tr>
+              <tr>
+                <td>
+                  <p><input type="submit" value="登録する"></p>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </form>
+
+        <h3>残り物の内容の書き換え</h3>
+        <p></p>
+        <form method="patch" action="http://localhost:3000/leftovers">
+          <p></p>
+          <table border="0">
+            <tbody>
+              <tr>
+                <td>id</td>
+                <td><input type="number" id="id" placeholder="id" /></td>
+              </tr>
+              <tr>
+                <td>titlename</td>
+                <td><input type="text" id="titlename" placeholder="残り物活用法タイトル" /></td>
+              </tr>
+              <tr>
+                <td>genre</td>
+                <td><input type="text" id="genre" placeholder="ジャンルを選択" /></td>
+              </tr>
+              <tr>
+                <td>useleftover</td>
+                <td><input type="text" id="useleftover" placeholder="活用例を具体的に記載" /></td>
+              </tr>
+              <tr>
+                <td>
+                  <p><input type="submit" value="変更する"></p>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </form>
+
+        <h3>残り物活用方法を削除する</h3>
+        <p></p>
+        <form method="delete"" action="http://localhost:3000/leftovers">
+          <p></p>
+          <table border="0">
+            <tbody>
+              <tr>
+                <td>id</td>
+                <td><input type="number"" id="id" placeholder="id" /></td>
+              </tr>
+              <tr>
+                <td>
+                  <p><input type="submit" value="削除する"></p>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </form>
+      </div>
+      <div id="out">
+        <p></p>
+      </div>
+    </div>
+  </body>
+</html>

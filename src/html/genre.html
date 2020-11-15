@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>solo=project</title>
+    <link rel="stylesheet" href="./style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <h1>ジャンル管理</h1>
+    <a href="main.html">開始画面に戻る</a><br>
+    <div id="parent">
+      <div id="in">
+        <p></p>
+        <h3>ジャンル一覧を取得する</h3>
+        <form method="get" action="http://localhost:3000/genres">
+        <p></p>
+        <table border="0">
+          <tbody>
+            <tr>
+              <td>
+                <p><input type="submit" value="取得する"></p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </form>
+
+      <h3>新規ジャンルを登録する</h3>
+      <p></p>
+      <form method="post" action="http://localhost:3000/genres">
+        <p></p>
+        <table border="0">
+          <tbody>
+            <tr>
+              <td>genre</td>
+              <td><input type="text" id="genre" placeholder="ジャンルを記載" /></td>
+            </tr>
+            <tr>
+              <td>
+                <p><input type="submit" value="登録する"></p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </form>
+
+      </div>
+      <div id="out">
+        <p></p>
+      </div>
+    </div>
+  </body>
+</html>
