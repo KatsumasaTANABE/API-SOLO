@@ -5,12 +5,15 @@
       "body-parser": "^1.18.1",
       "chai": "^4.2.0",
       "chai-http": "^4.3.0",
+      "class-transformer": "^0.3.1",
       "express": "^4.15.4",
       "mocha": "^8.2.1",
       "pg": "^8.4.0",
       "reflect-metadata": "^0.1.10",
       "routing-controllers": "^0.9.0-alpha.6",
       "typeorm": "0.2.29",
+      "typeorm-routing-controllers-extensions": "^0.2.0",
+      "typeorm-seeding": "^1.6.1",
       "uuid": "^8.3.1"
    },
    "devDependencies": {
@@ -29,6 +32,8 @@
       "makeMigrations": "yarn orm migration:generate",
       "migrate": "yarn orm migration:run",
       "rollback": "yarn orm migration:revert",
+      "seed:config": "ts-node ./node_modules/typeorm-seeding/dist/cli.js config",
+      "seed:run": "ts-node ./node_modules/typeorm-seeding/dist/cli.js seed",
       "test": "mocha --inspect -r ts-node/register -r dotenv/config src/test/_apiTest.ts"
    },
    "description": "y",

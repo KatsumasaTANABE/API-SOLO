@@ -1,10 +1,10 @@
 import {getRepository} from "typeorm";
 import {NextFunction, Request, Response} from "express";
-import {Users} from "../entity/Users";
+import {Leftovers} from "../entity/Leftovers";
 
-export class UserController {
+export class LeftoversController {
 
-    private userRepository = getRepository(Users);
+    private userRepository = getRepository(Leftovers);
 
     async all(request: Request, response: Response, next: NextFunction) {
         return this.userRepository.find();

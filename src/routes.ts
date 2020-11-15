@@ -1,28 +1,28 @@
-import {UserController} from "./controller/UserController";
+import {LeftoversController} from "./controller/LeftoversController";
 
 export const Routes = [{
     method: "get",
-    route: "/users",
-    controller: UserController,
+    route: "/leftovers",
+    controller: LeftoversController,
     action: "all"
 }, {
     method: "get",
-    route: "/users/:id",
-    controller: UserController,
+    route: "/leftovers/:id",
+    controller: LeftoversController,
     action: "one"
 }, {
     method: "post",
-    route: "/users",
-    controller: UserController,
+    route: "/leftovers",
+    controller: LeftoversController,
     action: "save"
 }, {
     method: "patch",
-    route: "/users/:id",
-    controller: UserController,
+    route: "/leftovers/:id",
+    controller: LeftoversController,
     action: "fix"
 }, {
     method: "delete",
-    route: "/users/:id",
-    controller: UserController,
+    route: "/leftovers/:id",
+    controller: LeftoversController,
     action: "remove"
 }];

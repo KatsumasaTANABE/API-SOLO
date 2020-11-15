@@ -4,7 +4,7 @@ import chaiHttp from "chai-http";
 import { Application } from "express";
 import { getRepository, Repository, Not, IsNull } from "typeorm";
 import DatabaseConnectionManager from "../dbserver";
-import Users from "../entity/Users";
+import Leftovers from "../entity/Leftovers";
 import { createExpressServer } from "routing-controllers";
 import setupServer from "../../src/server";
 
@@ -16,13 +16,13 @@ const expect = chai.expect;
 
 describe("expense manager", () => {
   let app: Application;
-  let userRepo: Repository<Users>;
+  let userRepo: Repository<Leftovers>;
   let testnumber;
 
   before(async () => {
     await DatabaseConnectionManager.connect();
     app = setupServer();
-    userRepo = getRepository(Users);
+    userRepo = getRepository(Leftovers);
   });
 
   after(async () => {
@@ -30,11 +30,11 @@ describe("expense manager", () => {
   });
 
   beforeEach(async () => {
-    let testUser = new Users();
-    testUser.firstName = "test";
-    testUser.lastName = "user";
-    testUser.age = 30;
-    testUser = await userRepo.save(testUser);
+    let testData = new Leftovers();
+    testData.titlename = "test";
+    testData.genre = "金銭";
+    testData.useleftover = "貯金";
+    testData = await userRepo.save(testData);
 
     /**
      * Advanced Requirements:
@@ -43,8 +43,8 @@ describe("expense manager", () => {
   });
 
   describe("get test", () => {
-    it("should be able to retrieve a user", async () => {
-      const res = await chai.request(app).get(`/users`);
+    it("should be able to retrieve a leftovers", async () => {
+      const res = await chai.request(app).get(`/leftovers`);
       testnumber = res.body[0].id;
       console.log(res.body[0].id);
       console.log(res.body);
@@ -53,9 +53,9 @@ describe("expense manager", () => {
     });
   });
 
-  describe("get test /user/:id", () => {
-    it("should be able to retrieve a user", async () => {
-      const testUrl = "/users/" + testnumber;
+  describe("get test /leftovers/:id", () => {
+    it("should be able to retrieve a leftovers", async () => {
+      const testUrl = "/leftovers/" + testnumber;
       console.log(testUrl);
       const res = await chai.request(app).get(testUrl);
       console.log(res.body);
@@ -64,14 +64,13 @@ describe("expense manager", () => {
     });
   });
 
-  describe("post test /user", () => {
-    const testuser ={firstName: "katsumasa", lastName: "posttest", age: "99"};
+  describe("post test /leftovers", () => {
+    const testData ={name: "katsumasa", genre: "foods", useLeftover: "sample"};
 
-    it("should be able to retrieve a user", async () => {
-      const res = await (await chai.request(app).post(`/users`)
-                  .send(testuser));
+    it("should be able to retrieve a leftovers", async () => {
+      const res = await (await chai.request(app).post(`/leftovers`)
+                  .send(testData));
       console.log(res.body);
-
       expect(res).to.have.status(200);
     });
   });
