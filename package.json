@@ -34,7 +34,8 @@
       "rollback": "yarn orm migration:revert",
       "seed:config": "ts-node ./node_modules/typeorm-seeding/dist/cli.js config",
       "seed:run": "ts-node ./node_modules/typeorm-seeding/dist/cli.js seed",
-      "test": "mocha --inspect -r ts-node/register -r dotenv/config src/test/_apiTest.ts"
+      "test": "mocha --inspect -r ts-node/register -r dotenv/config src/test/_apiTest.ts",
+      "dbreset": "psql -d test -f scripts/reCreateDB.sql -U postgres"
    },
    "description": "y",
    "private": true
