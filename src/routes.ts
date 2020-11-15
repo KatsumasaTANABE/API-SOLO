@@ -22,6 +22,11 @@ export const Routes = [{
     controller: LeftoversController,
     action: "fix"
 }, {
+    method: "put",
+    route: "/leftovers/:id",
+    controller: LeftoversController,
+    action: "fix"
+}, {
     method: "delete",
     route: "/leftovers/:id",
     controller: LeftoversController,
